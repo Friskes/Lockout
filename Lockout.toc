@@ -1,0 +1,9 @@
+## Interface: 30300
+## Title: Lockout
+## Notes: Displays locked out spellschools.
+## Notes-ruRU: Отображает заблокированные школы заклинаний.
+## Version: 1.6
+## Author: Giloran of EU-Blackrock, Modify by Friskes of RU-WowCircle
+## SavedVariables: LockoutDB
+
+Lockout.xml

@@ -1,0 +1,1393 @@
+<Ui>
+	<Script file="core.lua" />
+	<Frame name="Lockout_Frame" parent="UIParent" clampedToScreen="true" movable="true" frameStrata="DIALOG" hidden="true">
+		<Size>
+			<AbsDimension x="372" y="655" />
+		</Size>
+		<Anchors>
+			<Anchor point="CENTER">
+				<Offset>
+					<AbsDimension x="0" y="0" />
+				</Offset>
+			</Anchor>
+		</Anchors>
+		<Backdrop bgFile="Interface\TutorialFrame\TutorialFrameBackground" edgeFile="Interface\DialogFrame\UI-DialogBox-Border" tile="true">
+			<EdgeSize>
+				<AbsValue val="16" />
+			</EdgeSize>
+			<TileSize>
+				<AbsValue val="32" />
+			</TileSize>
+			<BackgroundInsets>
+				<AbsInset left="5" right="5" top="5" bottom="5" />
+			</BackgroundInsets>
+		</Backdrop>
+		<Layers>
+			<Layer level="ARTWORK">
+				<FontString name="Lockout_VersionNumber" inherits="GameFontNormal" font="Fonts\FRIZQT__.TTF" text="|cffffffffAuthor: Friskes.|r|cff1AEE30 v1.6|r" outline="normal">
+					<FontHeight val="12" />
+					<Anchors>
+						<Anchor point="BOTTOMRIGHT">
+							<Offset>
+								<AbsDimension x="-9" y="11" />
+							</Offset>
+						</Anchor>
+					</Anchors>
+				</FontString>
+				<FontString name="Lockout_Player" inherits="GameFontHighlight" font="Fonts\FRIZQT__.TTF" text="Player" outline="outline">
+					<FontHeight val="13" />
+					<Anchors>
+						<Anchor point="TOPLEFT">
+							<Offset>
+								<AbsDimension x="45" y="-40" />
+							</Offset>
+						</Anchor>
+					</Anchors>
+				</FontString>
+				<FontString name="Lockout_PlayerPet" inherits="GameFontHighlight" font="Fonts\FRIZQT__.TTF" text="PlayerPet" outline="outline">
+					<FontHeight val="13" />
+					<Anchors>
+						<Anchor point="TOPLEFT">
+							<Offset>
+								<AbsDimension x="45" y="-80" />
+							</Offset>
+						</Anchor>
+					</Anchors>
+				</FontString>
+				<FontString name="Lockout_Target" inherits="GameFontHighlight" font="Fonts\FRIZQT__.TTF" text="Target" outline="outline">
+					<FontHeight val="13" />
+					<Anchors>
+						<Anchor point="TOPLEFT">
+							<Offset>
+								<AbsDimension x="45" y="-120" />
+							</Offset>
+						</Anchor>
+					</Anchors>
+				</FontString>
+				<FontString name="Lockout_Focus" inherits="GameFontHighlight" font="Fonts\FRIZQT__.TTF" text="Focus" outline="outline">
+					<FontHeight val="13" />
+					<Anchors>
+						<Anchor point="TOPLEFT">
+							<Offset>
+								<AbsDimension x="45" y="-160" />
+							</Offset>
+						</Anchor>
+					</Anchors>
+				</FontString>
+				<FontString name="Lockout_Party1" inherits="GameFontHighlight" font="Fonts\FRIZQT__.TTF" text="Party1" outline="outline">
+					<FontHeight val="13" />
+					<Anchors>
+						<Anchor point="TOPLEFT">
+							<Offset>
+								<AbsDimension x="45" y="-200" />
+							</Offset>
+						</Anchor>
+					</Anchors>
+				</FontString>
+				<FontString name="Lockout_PartyPet1" inherits="GameFontHighlight" font="Fonts\FRIZQT__.TTF" text="PartyPet1" outline="outline">
+					<FontHeight val="13" />
+					<Anchors>
+						<Anchor point="TOPLEFT">
+							<Offset>
+								<AbsDimension x="45" y="-240" />
+							</Offset>
+						</Anchor>
+					</Anchors>
+				</FontString>
+				<FontString name="Lockout_Party2" inherits="GameFontHighlight" font="Fonts\FRIZQT__.TTF" text="Party2" outline="outline">
+					<FontHeight val="13" />
+					<Anchors>
+						<Anchor point="TOPLEFT">
+							<Offset>
+								<AbsDimension x="45" y="-280" />
+							</Offset>
+						</Anchor>
+					</Anchors>
+				</FontString>
+				<FontString name="Lockout_PartyPet2" inherits="GameFontHighlight" font="Fonts\FRIZQT__.TTF" text="PartyPet2" outline="outline">
+					<FontHeight val="13" />
+					<Anchors>
+						<Anchor point="TOPLEFT">
+							<Offset>
+								<AbsDimension x="45" y="-320" />
+							</Offset>
+						</Anchor>
+					</Anchors>
+				</FontString>
+				<FontString name="Lockout_Arena1" inherits="GameFontHighlight" font="Fonts\FRIZQT__.TTF" text="Arena1" outline="outline">
+					<FontHeight val="13" />
+					<Anchors>
+						<Anchor point="TOPLEFT">
+							<Offset>
+								<AbsDimension x="45" y="-360" />
+							</Offset>
+						</Anchor>
+					</Anchors>
+				</FontString>
+				<FontString name="Lockout_ArenaPet1" inherits="GameFontHighlight" font="Fonts\FRIZQT__.TTF" text="ArenaPet1" outline="outline">
+					<FontHeight val="13" />
+					<Anchors>
+						<Anchor point="TOPLEFT">
+							<Offset>
+								<AbsDimension x="45" y="-400" />
+							</Offset>
+						</Anchor>
+					</Anchors>
+				</FontString>
+				<FontString name="Lockout_Arena2" inherits="GameFontHighlight" font="Fonts\FRIZQT__.TTF" text="Arena2" outline="outline">
+					<FontHeight val="13" />
+					<Anchors>
+						<Anchor point="TOPLEFT">
+							<Offset>
+								<AbsDimension x="45" y="-440" />
+							</Offset>
+						</Anchor>
+					</Anchors>
+				</FontString>
+				<FontString name="Lockout_ArenaPet2" inherits="GameFontHighlight" font="Fonts\FRIZQT__.TTF" text="ArenaPet2" outline="outline">
+					<FontHeight val="13" />
+					<Anchors>
+						<Anchor point="TOPLEFT">
+							<Offset>
+								<AbsDimension x="45" y="-480" />
+							</Offset>
+						</Anchor>
+					</Anchors>
+				</FontString>
+				<FontString name="Lockout_Arena3" inherits="GameFontHighlight" font="Fonts\FRIZQT__.TTF" text="Arena3" outline="outline">
+					<FontHeight val="13" />
+					<Anchors>
+						<Anchor point="TOPLEFT">
+							<Offset>
+								<AbsDimension x="45" y="-520" />
+							</Offset>
+						</Anchor>
+					</Anchors>
+				</FontString>
+				<FontString name="Lockout_ArenaPet3" inherits="GameFontHighlight" font="Fonts\FRIZQT__.TTF" text="ArenaPet3" outline="outline">
+					<FontHeight val="13" />
+					<Anchors>
+						<Anchor point="TOPLEFT">
+							<Offset>
+								<AbsDimension x="45" y="-560" />
+							</Offset>
+						</Anchor>
+					</Anchors>
+				</FontString>
+				<FontString name="Lockout_HideBorders" inherits="GameFontHighlight" font="Fonts\FRIZQT__.TTF" text="Hide border" outline="outline">
+					<FontHeight val="11" />
+					<Anchors>
+						<Anchor point="TOPLEFT">
+							<Offset>
+								<AbsDimension x="30" y="-11" />
+							</Offset>
+						</Anchor>
+					</Anchors>
+				</FontString>
+				<FontString name="Lockout_HideCooldownText" inherits="GameFontHighlight" font="Fonts\FRIZQT__.TTF" text="Hide CD text" outline="outline">
+					<FontHeight val="13" />
+					<Anchors>
+						<Anchor point="TOPLEFT">
+							<Offset>
+								<AbsDimension x="45" y="-610" />
+							</Offset>
+						</Anchor>
+					</Anchors>
+				</FontString>
+				<FontString name="Lockout_Player_Anchor" inherits="GameFontHighlight" font="Fonts\FRIZQT__.TTF" text="LOCKOUT_ANCHOR_TO_BLIZZARD" outline="outline">
+					<FontHeight val="13" />
+					<Anchors>
+						<Anchor point="TOPLEFT">
+							<Offset>
+								<AbsDimension x="268" y="-9.5" />
+							</Offset>
+						</Anchor>
+					</Anchors>
+				</FontString>
+				<FontString name="Lockout_Player_Scale_Slider_Text" inherits="GameFontNormal" font="Fonts\FRIZQT__.TTF" outline="outline">
+					<FontHeight val="11" />
+					<Anchors>
+						<Anchor point="TOPLEFT">
+							<Offset>
+								<AbsDimension x="200" y="-27" />
+							</Offset>
+						</Anchor>
+					</Anchors>
+				</FontString>
+				<FontString name="Lockout_PlayerPet_Scale_Slider_Text" inherits="GameFontNormal" font="Fonts\FRIZQT__.TTF" outline="outline">
+					<FontHeight val="11" />
+					<Anchors>
+						<Anchor point="TOPLEFT">
+							<Offset>
+								<AbsDimension x="200" y="-67" />
+							</Offset>
+						</Anchor>
+					</Anchors>
+				</FontString>
+				<FontString name="Lockout_Target_Scale_Slider_Text" inherits="GameFontNormal" font="Fonts\FRIZQT__.TTF" outline="outline">
+					<FontHeight val="11" />
+					<Anchors>
+						<Anchor point="TOPLEFT">
+							<Offset>
+								<AbsDimension x="200" y="-107" />
+							</Offset>
+						</Anchor>
+					</Anchors>
+				</FontString>
+				<FontString name="Lockout_Focus_Scale_Slider_Text" inherits="GameFontNormal" font="Fonts\FRIZQT__.TTF" outline="outline">
+					<FontHeight val="11" />
+					<Anchors>
+						<Anchor point="TOPLEFT">
+							<Offset>
+								<AbsDimension x="200" y="-147" />
+							</Offset>
+						</Anchor>
+					</Anchors>
+				</FontString>
+				<FontString name="Lockout_Party1_Scale_Slider_Text" inherits="GameFontNormal" font="Fonts\FRIZQT__.TTF" outline="outline">
+					<FontHeight val="11" />
+					<Anchors>
+						<Anchor point="TOPLEFT">
+							<Offset>
+								<AbsDimension x="200" y="-187" />
+							</Offset>
+						</Anchor>
+					</Anchors>
+				</FontString>
+				<FontString name="Lockout_PartyPet1_Scale_Slider_Text" inherits="GameFontNormal" font="Fonts\FRIZQT__.TTF" outline="outline">
+					<FontHeight val="11" />
+					<Anchors>
+						<Anchor point="TOPLEFT">
+							<Offset>
+								<AbsDimension x="200" y="-227" />
+							</Offset>
+						</Anchor>
+					</Anchors>
+				</FontString>
+				<FontString name="Lockout_Party2_Scale_Slider_Text" inherits="GameFontNormal" font="Fonts\FRIZQT__.TTF" outline="outline">
+					<FontHeight val="11" />
+					<Anchors>
+						<Anchor point="TOPLEFT">
+							<Offset>
+								<AbsDimension x="200" y="-267" />
+							</Offset>
+						</Anchor>
+					</Anchors>
+				</FontString>
+				<FontString name="Lockout_PartyPet2_Scale_Slider_Text" inherits="GameFontNormal" font="Fonts\FRIZQT__.TTF" outline="outline">
+					<FontHeight val="11" />
+					<Anchors>
+						<Anchor point="TOPLEFT">
+							<Offset>
+								<AbsDimension x="200" y="-307" />
+							</Offset>
+						</Anchor>
+					</Anchors>
+				</FontString>
+				<FontString name="Lockout_Arena1_Scale_Slider_Text" inherits="GameFontNormal" font="Fonts\FRIZQT__.TTF" outline="outline">
+					<FontHeight val="11" />
+					<Anchors>
+						<Anchor point="TOPLEFT">
+							<Offset>
+								<AbsDimension x="200" y="-347" />
+							</Offset>
+						</Anchor>
+					</Anchors>
+				</FontString>
+				<FontString name="Lockout_ArenaPet1_Scale_Slider_Text" inherits="GameFontNormal" font="Fonts\FRIZQT__.TTF" outline="outline">
+					<FontHeight val="11" />
+					<Anchors>
+						<Anchor point="TOPLEFT">
+							<Offset>
+								<AbsDimension x="200" y="-387" />
+							</Offset>
+						</Anchor>
+					</Anchors>
+				</FontString>
+				<FontString name="Lockout_Arena2_Scale_Slider_Text" inherits="GameFontNormal" font="Fonts\FRIZQT__.TTF" outline="outline">
+					<FontHeight val="11" />
+					<Anchors>
+						<Anchor point="TOPLEFT">
+							<Offset>
+								<AbsDimension x="200" y="-427" />
+							</Offset>
+						</Anchor>
+					</Anchors>
+				</FontString>
+				<FontString name="Lockout_ArenaPet2_Scale_Slider_Text" inherits="GameFontNormal" font="Fonts\FRIZQT__.TTF" outline="outline">
+					<FontHeight val="11" />
+					<Anchors>
+						<Anchor point="TOPLEFT">
+							<Offset>
+								<AbsDimension x="200" y="-467" />
+							</Offset>
+						</Anchor>
+					</Anchors>
+				</FontString>
+				<FontString name="Lockout_Arena3_Scale_Slider_Text" inherits="GameFontNormal" font="Fonts\FRIZQT__.TTF" outline="outline">
+					<FontHeight val="11" />
+					<Anchors>
+						<Anchor point="TOPLEFT">
+							<Offset>
+								<AbsDimension x="200" y="-507" />
+							</Offset>
+						</Anchor>
+					</Anchors>
+				</FontString>
+				<FontString name="Lockout_ArenaPet3_Scale_Slider_Text" inherits="GameFontNormal" font="Fonts\FRIZQT__.TTF" outline="outline">
+					<FontHeight val="11" />
+					<Anchors>
+						<Anchor point="TOPLEFT">
+							<Offset>
+								<AbsDimension x="200" y="-547" />
+							</Offset>
+						</Anchor>
+					</Anchors>
+				</FontString>
+				<FontString name="Lockout_CDText_Scale_Slider_Text" inherits="GameFontNormal" font="Fonts\FRIZQT__.TTF" outline="outline">
+					<FontHeight val="11" />
+					<Anchors>
+						<Anchor point="TOPLEFT">
+							<Offset>
+								<AbsDimension x="175" y="-597" />
+							</Offset>
+						</Anchor>
+					</Anchors>
+				</FontString>
+			</Layer>
+		</Layers>
+		<Frames>
+			<Frame name="Lockout_Header" parent="Lockout_Frame" enableMouse="true">
+				<Size>
+					<AbsDimension x="140" y="40" />
+				</Size>
+				<Anchors>
+					<Anchor point="TOP">
+						<Offset>
+							<AbsDimension x="0" y="15" />
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnMouseDown>
+						Lockout_Frame:StartMoving()
+					</OnMouseDown>
+					<OnMouseUp>
+						Lockout_Frame:StopMovingOrSizing()
+					</OnMouseUp>
+				</Scripts>
+				<Layers>
+					<Layer level="ARTWORK">
+						<Texture name="Lockout_Header" file="Interface\DialogFrame\UI-DialogBox-Header" enableMouse="true">
+							<Size>
+								<AbsDimension x="256" y="64" />
+							</Size>
+							<Anchors>
+								<Anchor point="TOP" relativeTo="Lockout_Header">
+									<Offset>
+										<AbsDimension x="0" y="0" />
+									</Offset>
+								</Anchor>
+							</Anchors>
+						</Texture>
+						<FontString name="Lockout_Title" font="Fonts\FRIZQT__.TTF" text="Lockout" outline="normal">
+							<FontHeight val="18" />
+							<Anchors>
+								<Anchor point="TOP" relativeTo="Lockout_Header">
+									<Offset>
+										<AbsDimension x="0" y="-11" />
+									</Offset>
+								</Anchor>
+							</Anchors>
+						</FontString>
+					</Layer>
+				</Layers>
+			</Frame>
+			<Button name="Lockout_Close_Button" inherits="UIPanelCloseButton">
+				<Anchors>
+					<Anchor point="TOPRIGHT">
+						<Offset>
+							<AbsDimension x="-3" y="-3" />
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnClick>
+					  Lockout_Close()
+					</OnClick>
+				</Scripts>
+			</Button>
+			<CheckButton name="Lockout_HideBorders_Check" inherits="OptionsCheckButtonTemplate" checked="true" hidden="false">
+				<Size>
+					<AbsDimension x="20" y="20" />
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset>
+							<AbsDimension x="8" y="-7"></AbsDimension>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnLoad>
+            self:SetHitRectInsets(0, -65, 0, 0)
+					</OnLoad>
+					<OnEnter>
+            GameTooltip:SetOwner(self, "ANCHOR_RIGHT")
+            GameTooltip:SetText("Hide border on square icons.", 1, 0.82, 0, 1, false)
+					</OnEnter>
+					<OnClick>
+					  Lockout_HideBorders()
+					</OnClick>
+				</Scripts>
+			</CheckButton>
+			<CheckButton name="Lockout_HideCooldownText_Check" inherits="OptionsCheckButtonTemplate" checked="true" hidden="false">
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset>
+							<AbsDimension x="15" y="-605"></AbsDimension>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnEnter>
+            GameTooltip:SetOwner(self, "ANCHOR_RIGHT")
+            GameTooltip:SetText("Hide cooldown text on icons.", 1, 0.82, 0, 1, false)
+					</OnEnter>
+					<OnClick>
+					  Lockout_HideCooldownText()
+					</OnClick>
+				</Scripts>
+			</CheckButton>
+			<CheckButton name="Lockout_Player_Check" inherits="OptionsCheckButtonTemplate" checked="true" hidden="false">
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset>
+							<AbsDimension x="15" y="-35"></AbsDimension>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnClick>
+					  Lockout_Player()
+					</OnClick>
+				</Scripts>
+			</CheckButton>
+			<CheckButton name="Lockout_PlayerPet_Check" inherits="OptionsCheckButtonTemplate" checked="true" hidden="false">
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset>
+							<AbsDimension x="15" y="-75"></AbsDimension>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnClick>
+					  Lockout_PlayerPet()
+					</OnClick>
+				</Scripts>
+			</CheckButton>
+			<CheckButton name="Lockout_Target_Check" inherits="OptionsCheckButtonTemplate" checked="true" hidden="false">
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset>
+							<AbsDimension x="15" y="-115"></AbsDimension>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnClick>
+					  Lockout_Target()
+					</OnClick>
+				</Scripts>
+			</CheckButton>
+			<CheckButton name="Lockout_Focus_Check" inherits="OptionsCheckButtonTemplate" checked="true" hidden="false">
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset>
+							<AbsDimension x="15" y="-155"></AbsDimension>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnClick>
+					  Lockout_Focus()
+					</OnClick>
+				</Scripts>
+			</CheckButton>
+			<CheckButton name="Lockout_Party1_Check" inherits="OptionsCheckButtonTemplate" checked="true" hidden="false">
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset>
+							<AbsDimension x="15" y="-195"></AbsDimension>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnClick>
+					  Lockout_Party1()
+					</OnClick>
+				</Scripts>
+			</CheckButton>
+			<CheckButton name="Lockout_PartyPet1_Check" inherits="OptionsCheckButtonTemplate" checked="true" hidden="false">
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset>
+							<AbsDimension x="15" y="-235"></AbsDimension>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnClick>
+					  Lockout_PartyPet1()
+					</OnClick>
+				</Scripts>
+			</CheckButton>
+			<CheckButton name="Lockout_Party2_Check" inherits="OptionsCheckButtonTemplate" checked="true" hidden="false">
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset>
+							<AbsDimension x="15" y="-275"></AbsDimension>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnClick>
+					  Lockout_Party2()
+					</OnClick>
+				</Scripts>
+			</CheckButton>
+			<CheckButton name="Lockout_PartyPet2_Check" inherits="OptionsCheckButtonTemplate" checked="true" hidden="false">
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset>
+							<AbsDimension x="15" y="-315"></AbsDimension>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnClick>
+					  Lockout_PartyPet2()
+					</OnClick>
+				</Scripts>
+			</CheckButton>
+			<CheckButton name="Lockout_Arena1_Check" inherits="OptionsCheckButtonTemplate" checked="true" hidden="false">
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset>
+							<AbsDimension x="15" y="-355"></AbsDimension>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnClick>
+					  Lockout_Arena1()
+					</OnClick>
+				</Scripts>
+			</CheckButton>
+			<CheckButton name="Lockout_ArenaPet1_Check" inherits="OptionsCheckButtonTemplate" checked="true" hidden="false">
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset>
+							<AbsDimension x="15" y="-395"></AbsDimension>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnClick>
+					  Lockout_ArenaPet1()
+					</OnClick>
+				</Scripts>
+			</CheckButton>
+			<CheckButton name="Lockout_Arena2_Check" inherits="OptionsCheckButtonTemplate" checked="true" hidden="false">
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset>
+							<AbsDimension x="15" y="-435"></AbsDimension>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnClick>
+					  Lockout_Arena2()
+					</OnClick>
+				</Scripts>
+			</CheckButton>
+			<CheckButton name="Lockout_ArenaPet2_Check" inherits="OptionsCheckButtonTemplate" checked="true" hidden="false">
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset>
+							<AbsDimension x="15" y="-475"></AbsDimension>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnClick>
+					  Lockout_ArenaPet2()
+					</OnClick>
+				</Scripts>
+			</CheckButton>
+			<CheckButton name="Lockout_Arena3_Check" inherits="OptionsCheckButtonTemplate" checked="true" hidden="false">
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset>
+							<AbsDimension x="15" y="-515"></AbsDimension>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnClick>
+					  Lockout_Arena3()
+					</OnClick>
+				</Scripts>
+			</CheckButton>
+			<CheckButton name="Lockout_ArenaPet3_Check" inherits="OptionsCheckButtonTemplate" checked="true" hidden="false">
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset>
+							<AbsDimension x="15" y="-555"></AbsDimension>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnClick>
+					  Lockout_ArenaPet3()
+					</OnClick>
+				</Scripts>
+			</CheckButton>
+			<CheckButton name="Lockout_Player_Anchor_Check" inherits="OptionsCheckButtonTemplate" checked="true" hidden="false">
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset>
+							<AbsDimension x="285" y="-35"></AbsDimension>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnLoad>
+						self:SetHitRectInsets(0, 0, 0, 0)
+					</OnLoad>
+					<OnClick>
+					  Lockout_Player_Anchor()
+					</OnClick>
+				</Scripts>
+			</CheckButton>
+			<CheckButton name="Lockout_PlayerPet_Anchor_Check" inherits="OptionsCheckButtonTemplate" checked="true" hidden="false">
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset>
+							<AbsDimension x="285" y="-75"></AbsDimension>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnLoad>
+						self:SetHitRectInsets(0, -50, 0, 0)
+					</OnLoad>
+					<OnClick>
+					  Lockout_PlayerPet_Anchor()
+					</OnClick>
+				</Scripts>
+			</CheckButton>
+			<CheckButton name="Lockout_Target_Anchor_Check" inherits="OptionsCheckButtonTemplate" checked="true" hidden="false">
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset>
+							<AbsDimension x="285" y="-115"></AbsDimension>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnLoad>
+						self:SetHitRectInsets(0, -50, 0, 0)
+					</OnLoad>
+					<OnClick>
+					  Lockout_Target_Anchor()
+					</OnClick>
+				</Scripts>
+			</CheckButton>
+			<CheckButton name="Lockout_Focus_Anchor_Check" inherits="OptionsCheckButtonTemplate" checked="true" hidden="false">
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset>
+							<AbsDimension x="285" y="-155"></AbsDimension>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnLoad>
+						self:SetHitRectInsets(0, -50, 0, 0)
+					</OnLoad>
+					<OnClick>
+					  Lockout_Focus_Anchor()
+					</OnClick>
+				</Scripts>
+			</CheckButton>
+			<CheckButton name="Lockout_Party1_Anchor_Check" inherits="OptionsCheckButtonTemplate" checked="true" hidden="false">
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset>
+							<AbsDimension x="285" y="-195"></AbsDimension>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnLoad>
+						self:SetHitRectInsets(0, -50, 0, 0)
+					</OnLoad>
+					<OnClick>
+					  Lockout_Party1_Anchor()
+					</OnClick>
+				</Scripts>
+			</CheckButton>
+			<CheckButton name="Lockout_PartyPet1_Anchor_Check" inherits="OptionsCheckButtonTemplate" checked="true" hidden="false">
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset>
+							<AbsDimension x="285" y="-235"></AbsDimension>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnLoad>
+						self:SetHitRectInsets(0, -50, 0, 0)
+					</OnLoad>
+					<OnClick>
+					  Lockout_PartyPet1_Anchor()
+					</OnClick>
+				</Scripts>
+			</CheckButton>
+			<CheckButton name="Lockout_Party2_Anchor_Check" inherits="OptionsCheckButtonTemplate" checked="true" hidden="false">
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset>
+							<AbsDimension x="285" y="-275"></AbsDimension>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnLoad>
+						self:SetHitRectInsets(0, -50, 0, 0)
+					</OnLoad>
+					<OnClick>
+					  Lockout_Party2_Anchor()
+					</OnClick>
+				</Scripts>
+			</CheckButton>
+			<CheckButton name="Lockout_PartyPet2_Anchor_Check" inherits="OptionsCheckButtonTemplate" checked="true" hidden="false">
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset>
+							<AbsDimension x="285" y="-315"></AbsDimension>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnLoad>
+						self:SetHitRectInsets(0, -50, 0, 0)
+					</OnLoad>
+					<OnClick>
+					  Lockout_PartyPet2_Anchor()
+					</OnClick>
+				</Scripts>
+			</CheckButton>
+			<CheckButton name="Lockout_Arena1_Anchor_Check" inherits="OptionsCheckButtonTemplate" checked="true" hidden="false">
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset>
+							<AbsDimension x="285" y="-355"></AbsDimension>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnLoad>
+						self:SetHitRectInsets(0, -50, 0, 0)
+					</OnLoad>
+					<OnClick>
+					  Lockout_Arena1_Anchor()
+					</OnClick>
+				</Scripts>
+			</CheckButton>
+			<CheckButton name="Lockout_ArenaPet1_Anchor_Check" inherits="OptionsCheckButtonTemplate" checked="true" hidden="false">
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset>
+							<AbsDimension x="285" y="-395"></AbsDimension>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnLoad>
+						self:SetHitRectInsets(0, -50, 0, 0)
+					</OnLoad>
+					<OnClick>
+					  Lockout_ArenaPet1_Anchor()
+					</OnClick>
+				</Scripts>
+			</CheckButton>
+			<CheckButton name="Lockout_Arena2_Anchor_Check" inherits="OptionsCheckButtonTemplate" checked="true" hidden="false">
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset>
+							<AbsDimension x="285" y="-435"></AbsDimension>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnLoad>
+						self:SetHitRectInsets(0, -50, 0, 0)
+					</OnLoad>
+					<OnClick>
+					  Lockout_Arena2_Anchor()
+					</OnClick>
+				</Scripts>
+			</CheckButton>
+			<CheckButton name="Lockout_ArenaPet2_Anchor_Check" inherits="OptionsCheckButtonTemplate" checked="true" hidden="false">
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset>
+							<AbsDimension x="285" y="-475"></AbsDimension>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnLoad>
+						self:SetHitRectInsets(0, -50, 0, 0)
+					</OnLoad>
+					<OnClick>
+					  Lockout_ArenaPet2_Anchor()
+					</OnClick>
+				</Scripts>
+			</CheckButton>
+			<CheckButton name="Lockout_Arena3_Anchor_Check" inherits="OptionsCheckButtonTemplate" checked="true" hidden="false">
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset>
+							<AbsDimension x="285" y="-515"></AbsDimension>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnLoad>
+						self:SetHitRectInsets(0, -50, 0, 0)
+					</OnLoad>
+					<OnClick>
+					  Lockout_Arena3_Anchor()
+					</OnClick>
+				</Scripts>
+			</CheckButton>
+			<CheckButton name="Lockout_ArenaPet3_Anchor_Check" inherits="OptionsCheckButtonTemplate" checked="true" hidden="false">
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset>
+							<AbsDimension x="285" y="-555"></AbsDimension>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnLoad>
+						self:SetHitRectInsets(0, -50, 0, 0)
+					</OnLoad>
+					<OnClick>
+					  Lockout_ArenaPet3_Anchor()
+					</OnClick>
+				</Scripts>
+			</CheckButton>
+			<Slider name="Lockout_Player_Scale_Slider" orientation="HORIZONTAL" minValue="0.43" maxValue="1.45" valueStep="0.01">
+				<Size>
+					<AbsDimension x="120" y="16" />
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset>
+							<AbsDimension x="150" y="-40" />
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Backdrop bgFile="Interface\Buttons\UI-SliderBar-Background" edgeFile="Interface\Buttons\UI-SliderBar-Border" tile="true">
+					<EdgeSize>
+						<AbsValue val="8" />
+					</EdgeSize>
+					<TileSize>
+						<AbsValue val="8" />
+					</TileSize>
+					<BackgroundInsets>
+						<AbsInset left="3" right="3" top="6" bottom="6" />
+					</BackgroundInsets>
+				</Backdrop>
+				<Scripts>
+					<OnValueChanged>
+					  Lockout_Player_UpdateScale(value)
+					</OnValueChanged>
+				</Scripts>
+				<ThumbTexture file="Interface\Buttons\UI-SliderBar-Button-Horizontal">
+					<Size>
+						<AbsDimension x="32" y="32" />
+					</Size>
+				</ThumbTexture>
+			</Slider>
+			<Slider name="Lockout_PlayerPet_Scale_Slider" orientation="HORIZONTAL" minValue="0.43" maxValue="1.45" valueStep="0.01">
+				<Size>
+					<AbsDimension x="120" y="16" />
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset>
+							<AbsDimension x="150" y="-80" />
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Backdrop bgFile="Interface\Buttons\UI-SliderBar-Background" edgeFile="Interface\Buttons\UI-SliderBar-Border" tile="true">
+					<EdgeSize>
+						<AbsValue val="8" />
+					</EdgeSize>
+					<TileSize>
+						<AbsValue val="8" />
+					</TileSize>
+					<BackgroundInsets>
+						<AbsInset left="3" right="3" top="6" bottom="6" />
+					</BackgroundInsets>
+				</Backdrop>
+				<Scripts>
+					<OnValueChanged>
+					  Lockout_PlayerPet_UpdateScale(value)
+					</OnValueChanged>
+				</Scripts>
+				<ThumbTexture file="Interface\Buttons\UI-SliderBar-Button-Horizontal">
+					<Size>
+						<AbsDimension x="32" y="32" />
+					</Size>
+				</ThumbTexture>
+			</Slider>
+			<Slider name="Lockout_Target_Scale_Slider" orientation="HORIZONTAL" minValue="0.43" maxValue="1.45" valueStep="0.01">
+				<Size>
+					<AbsDimension x="120" y="16" />
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset>
+							<AbsDimension x="150" y="-120" />
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Backdrop bgFile="Interface\Buttons\UI-SliderBar-Background" edgeFile="Interface\Buttons\UI-SliderBar-Border" tile="true">
+					<EdgeSize>
+						<AbsValue val="8" />
+					</EdgeSize>
+					<TileSize>
+						<AbsValue val="8" />
+					</TileSize>
+					<BackgroundInsets>
+						<AbsInset left="3" right="3" top="6" bottom="6" />
+					</BackgroundInsets>
+				</Backdrop>
+				<Scripts>
+					<OnValueChanged>
+						Lockout_Target_UpdateScale(value)
+					</OnValueChanged>
+				</Scripts>
+				<ThumbTexture file="Interface\Buttons\UI-SliderBar-Button-Horizontal">
+					<Size>
+						<AbsDimension x="32" y="32" />
+					</Size>
+				</ThumbTexture>
+			</Slider>
+			<Slider name="Lockout_Focus_Scale_Slider" orientation="HORIZONTAL" minValue="0.43" maxValue="1.45" valueStep="0.01">
+				<Size>
+					<AbsDimension x="120" y="16" />
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset>
+							<AbsDimension x="150" y="-160" />
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Backdrop bgFile="Interface\Buttons\UI-SliderBar-Background" edgeFile="Interface\Buttons\UI-SliderBar-Border" tile="true">
+					<EdgeSize>
+						<AbsValue val="8" />
+					</EdgeSize>
+					<TileSize>
+						<AbsValue val="8" />
+					</TileSize>
+					<BackgroundInsets>
+						<AbsInset left="3" right="3" top="6" bottom="6" />
+					</BackgroundInsets>
+				</Backdrop>
+				<Scripts>
+					<OnValueChanged>
+						Lockout_Focus_UpdateScale(value)
+					</OnValueChanged>
+				</Scripts>
+				<ThumbTexture file="Interface\Buttons\UI-SliderBar-Button-Horizontal">
+					<Size>
+						<AbsDimension x="32" y="32" />
+					</Size>
+				</ThumbTexture>
+			</Slider>
+			<Slider name="Lockout_Party1_Scale_Slider" orientation="HORIZONTAL" minValue="0.43" maxValue="1.45" valueStep="0.01">
+				<Size>
+					<AbsDimension x="120" y="16" />
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset>
+							<AbsDimension x="150" y="-200" />
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Backdrop bgFile="Interface\Buttons\UI-SliderBar-Background" edgeFile="Interface\Buttons\UI-SliderBar-Border" tile="true">
+					<EdgeSize>
+						<AbsValue val="8" />
+					</EdgeSize>
+					<TileSize>
+						<AbsValue val="8" />
+					</TileSize>
+					<BackgroundInsets>
+						<AbsInset left="3" right="3" top="6" bottom="6" />
+					</BackgroundInsets>
+				</Backdrop>
+				<Scripts>
+					<OnValueChanged>
+						Lockout_Party1_UpdateScale(value)
+					</OnValueChanged>
+				</Scripts>
+				<ThumbTexture file="Interface\Buttons\UI-SliderBar-Button-Horizontal">
+					<Size>
+						<AbsDimension x="32" y="32" />
+					</Size>
+				</ThumbTexture>
+			</Slider>
+			<Slider name="Lockout_PartyPet1_Scale_Slider" orientation="HORIZONTAL" minValue="0.43" maxValue="1.45" valueStep="0.01">
+				<Size>
+					<AbsDimension x="120" y="16" />
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset>
+							<AbsDimension x="150" y="-240" />
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Backdrop bgFile="Interface\Buttons\UI-SliderBar-Background" edgeFile="Interface\Buttons\UI-SliderBar-Border" tile="true">
+					<EdgeSize>
+						<AbsValue val="8" />
+					</EdgeSize>
+					<TileSize>
+						<AbsValue val="8" />
+					</TileSize>
+					<BackgroundInsets>
+						<AbsInset left="3" right="3" top="6" bottom="6" />
+					</BackgroundInsets>
+				</Backdrop>
+				<Scripts>
+					<OnValueChanged>
+						Lockout_PartyPet1_UpdateScale(value)
+					</OnValueChanged>
+				</Scripts>
+				<ThumbTexture file="Interface\Buttons\UI-SliderBar-Button-Horizontal">
+					<Size>
+						<AbsDimension x="32" y="32" />
+					</Size>
+				</ThumbTexture>
+			</Slider>
+			<Slider name="Lockout_Party2_Scale_Slider" orientation="HORIZONTAL" minValue="0.43" maxValue="1.45" valueStep="0.01">
+				<Size>
+					<AbsDimension x="120" y="16" />
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset>
+							<AbsDimension x="150" y="-280" />
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Backdrop bgFile="Interface\Buttons\UI-SliderBar-Background" edgeFile="Interface\Buttons\UI-SliderBar-Border" tile="true">
+					<EdgeSize>
+						<AbsValue val="8" />
+					</EdgeSize>
+					<TileSize>
+						<AbsValue val="8" />
+					</TileSize>
+					<BackgroundInsets>
+						<AbsInset left="3" right="3" top="6" bottom="6" />
+					</BackgroundInsets>
+				</Backdrop>
+				<Scripts>
+					<OnValueChanged>
+						Lockout_Party2_UpdateScale(value)
+					</OnValueChanged>
+				</Scripts>
+				<ThumbTexture file="Interface\Buttons\UI-SliderBar-Button-Horizontal">
+					<Size>
+						<AbsDimension x="32" y="32" />
+					</Size>
+				</ThumbTexture>
+			</Slider>
+			<Slider name="Lockout_PartyPet2_Scale_Slider" orientation="HORIZONTAL" minValue="0.43" maxValue="1.45" valueStep="0.01">
+				<Size>
+					<AbsDimension x="120" y="16" />
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset>
+							<AbsDimension x="150" y="-320" />
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Backdrop bgFile="Interface\Buttons\UI-SliderBar-Background" edgeFile="Interface\Buttons\UI-SliderBar-Border" tile="true">
+					<EdgeSize>
+						<AbsValue val="8" />
+					</EdgeSize>
+					<TileSize>
+						<AbsValue val="8" />
+					</TileSize>
+					<BackgroundInsets>
+						<AbsInset left="3" right="3" top="6" bottom="6" />
+					</BackgroundInsets>
+				</Backdrop>
+				<Scripts>
+					<OnValueChanged>
+						Lockout_PartyPet2_UpdateScale(value)
+					</OnValueChanged>
+				</Scripts>
+				<ThumbTexture file="Interface\Buttons\UI-SliderBar-Button-Horizontal">
+					<Size>
+						<AbsDimension x="32" y="32" />
+					</Size>
+				</ThumbTexture>
+			</Slider>
+			<Slider name="Lockout_Arena1_Scale_Slider" orientation="HORIZONTAL" minValue="0.43" maxValue="1.45" valueStep="0.01">
+				<Size>
+					<AbsDimension x="120" y="16" />
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset>
+							<AbsDimension x="150" y="-360" />
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Backdrop bgFile="Interface\Buttons\UI-SliderBar-Background" edgeFile="Interface\Buttons\UI-SliderBar-Border" tile="true">
+					<EdgeSize>
+						<AbsValue val="8" />
+					</EdgeSize>
+					<TileSize>
+						<AbsValue val="8" />
+					</TileSize>
+					<BackgroundInsets>
+						<AbsInset left="3" right="3" top="6" bottom="6" />
+					</BackgroundInsets>
+				</Backdrop>
+				<Scripts>
+					<OnValueChanged>
+						Lockout_Arena1_UpdateScale(value)
+					</OnValueChanged>
+				</Scripts>
+				<ThumbTexture file="Interface\Buttons\UI-SliderBar-Button-Horizontal">
+					<Size>
+						<AbsDimension x="32" y="32" />
+					</Size>
+				</ThumbTexture>
+			</Slider>
+			<Slider name="Lockout_ArenaPet1_Scale_Slider" orientation="HORIZONTAL" minValue="0.43" maxValue="1.45" valueStep="0.01">
+				<Size>
+					<AbsDimension x="120" y="16" />
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset>
+							<AbsDimension x="150" y="-400" />
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Backdrop bgFile="Interface\Buttons\UI-SliderBar-Background" edgeFile="Interface\Buttons\UI-SliderBar-Border" tile="true">
+					<EdgeSize>
+						<AbsValue val="8" />
+					</EdgeSize>
+					<TileSize>
+						<AbsValue val="8" />
+					</TileSize>
+					<BackgroundInsets>
+						<AbsInset left="3" right="3" top="6" bottom="6" />
+					</BackgroundInsets>
+				</Backdrop>
+				<Scripts>
+					<OnValueChanged>
+						Lockout_ArenaPet1_UpdateScale(value)
+					</OnValueChanged>
+				</Scripts>
+				<ThumbTexture file="Interface\Buttons\UI-SliderBar-Button-Horizontal">
+					<Size>
+						<AbsDimension x="32" y="32" />
+					</Size>
+				</ThumbTexture>
+			</Slider>
+			<Slider name="Lockout_Arena2_Scale_Slider" orientation="HORIZONTAL" minValue="0.43" maxValue="1.45" valueStep="0.01">
+				<Size>
+					<AbsDimension x="120" y="16" />
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset>
+							<AbsDimension x="150" y="-440" />
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Backdrop bgFile="Interface\Buttons\UI-SliderBar-Background" edgeFile="Interface\Buttons\UI-SliderBar-Border" tile="true">
+					<EdgeSize>
+						<AbsValue val="8" />
+					</EdgeSize>
+					<TileSize>
+						<AbsValue val="8" />
+					</TileSize>
+					<BackgroundInsets>
+						<AbsInset left="3" right="3" top="6" bottom="6" />
+					</BackgroundInsets>
+				</Backdrop>
+				<Scripts>
+					<OnValueChanged>
+						Lockout_Arena2_UpdateScale(value)
+					</OnValueChanged>
+				</Scripts>
+				<ThumbTexture file="Interface\Buttons\UI-SliderBar-Button-Horizontal">
+					<Size>
+						<AbsDimension x="32" y="32" />
+					</Size>
+				</ThumbTexture>
+			</Slider>
+			<Slider name="Lockout_ArenaPet2_Scale_Slider" orientation="HORIZONTAL" minValue="0.43" maxValue="1.45" valueStep="0.01">
+				<Size>
+					<AbsDimension x="120" y="16" />
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset>
+							<AbsDimension x="150" y="-480" />
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Backdrop bgFile="Interface\Buttons\UI-SliderBar-Background" edgeFile="Interface\Buttons\UI-SliderBar-Border" tile="true">
+					<EdgeSize>
+						<AbsValue val="8" />
+					</EdgeSize>
+					<TileSize>
+						<AbsValue val="8" />
+					</TileSize>
+					<BackgroundInsets>
+						<AbsInset left="3" right="3" top="6" bottom="6" />
+					</BackgroundInsets>
+				</Backdrop>
+				<Scripts>
+					<OnValueChanged>
+						Lockout_ArenaPet2_UpdateScale(value)
+					</OnValueChanged>
+				</Scripts>
+				<ThumbTexture file="Interface\Buttons\UI-SliderBar-Button-Horizontal">
+					<Size>
+						<AbsDimension x="32" y="32" />
+					</Size>
+				</ThumbTexture>
+			</Slider>
+			<Slider name="Lockout_Arena3_Scale_Slider" orientation="HORIZONTAL" minValue="0.43" maxValue="1.45" valueStep="0.01">
+				<Size>
+					<AbsDimension x="120" y="16" />
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset>
+							<AbsDimension x="150" y="-520" />
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Backdrop bgFile="Interface\Buttons\UI-SliderBar-Background" edgeFile="Interface\Buttons\UI-SliderBar-Border" tile="true">
+					<EdgeSize>
+						<AbsValue val="8" />
+					</EdgeSize>
+					<TileSize>
+						<AbsValue val="8" />
+					</TileSize>
+					<BackgroundInsets>
+						<AbsInset left="3" right="3" top="6" bottom="6" />
+					</BackgroundInsets>
+				</Backdrop>
+				<Scripts>
+					<OnValueChanged>
+						Lockout_Arena3_UpdateScale(value)
+					</OnValueChanged>
+				</Scripts>
+				<ThumbTexture file="Interface\Buttons\UI-SliderBar-Button-Horizontal">
+					<Size>
+						<AbsDimension x="32" y="32" />
+					</Size>
+				</ThumbTexture>
+			</Slider>
+			<Slider name="Lockout_ArenaPet3_Scale_Slider" orientation="HORIZONTAL" minValue="0.43" maxValue="1.45" valueStep="0.01">
+				<Size>
+					<AbsDimension x="120" y="16" />
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset>
+							<AbsDimension x="150" y="-560" />
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Backdrop bgFile="Interface\Buttons\UI-SliderBar-Background" edgeFile="Interface\Buttons\UI-SliderBar-Border" tile="true">
+					<EdgeSize>
+						<AbsValue val="8" />
+					</EdgeSize>
+					<TileSize>
+						<AbsValue val="8" />
+					</TileSize>
+					<BackgroundInsets>
+						<AbsInset left="3" right="3" top="6" bottom="6" />
+					</BackgroundInsets>
+				</Backdrop>
+				<Scripts>
+					<OnValueChanged>
+						Lockout_ArenaPet3_UpdateScale(value)
+					</OnValueChanged>
+				</Scripts>
+				<ThumbTexture file="Interface\Buttons\UI-SliderBar-Button-Horizontal">
+					<Size>
+						<AbsDimension x="32" y="32" />
+					</Size>
+				</ThumbTexture>
+			</Slider>
+			<Slider name="Lockout_CDText_Scale_Slider" orientation="HORIZONTAL" minValue="1.9" maxValue="6" valueStep="0.1">
+				<Size>
+					<AbsDimension x="120" y="16" />
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset>
+							<AbsDimension x="150" y="-610" />
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Backdrop bgFile="Interface\Buttons\UI-SliderBar-Background" edgeFile="Interface\Buttons\UI-SliderBar-Border" tile="true">
+					<EdgeSize>
+						<AbsValue val="8" />
+					</EdgeSize>
+					<TileSize>
+						<AbsValue val="8" />
+					</TileSize>
+					<BackgroundInsets>
+						<AbsInset left="3" right="3" top="6" bottom="6" />
+					</BackgroundInsets>
+				</Backdrop>
+				<Scripts>
+					<OnValueChanged>
+						Lockout_CDText_UpdateScale(value)
+					</OnValueChanged>
+				</Scripts>
+				<ThumbTexture file="Interface\Buttons\UI-SliderBar-Button-Horizontal">
+					<Size>
+						<AbsDimension x="32" y="32" />
+					</Size>
+				</ThumbTexture>
+			</Slider>
+		</Frames>
+	</Frame>
+</Ui>
